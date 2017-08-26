@@ -50,5 +50,12 @@ window.onload = () => {
   dateUpdatedH.innerHTML = ratesFromDate
   updateRates()
 
-  window.setInterval(updateRates, 10000)
+  // Update the exchange rates every hour
+  window.setInterval(updateRates, 3600000)
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(() => { console.log('Service worker registered') })
+  }
 }

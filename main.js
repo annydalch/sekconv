@@ -8,6 +8,7 @@ const port = process.env.PORT || 8080
 
 app.use(morgan('dev'))
 app.set('view engine', 'pug')
+app.use(express.static('static'))
 
 require('./routes.js')(app)
 

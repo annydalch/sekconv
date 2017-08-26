@@ -3,9 +3,14 @@ doctype html
 head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css", crossorigin="anonymous")
+        link(rel="stylesheet", href="/style/bootstrap.min.css")
         link(rel="stylesheet", href="/style/main.css")
-        link(rel="icon", type="image/x-icon", href="/image/favicon.ico")
+        link(rel="icon", type="image/png", size="16x16", href="/image/favicon-16x16.png")
+        link(rel="manifest", href="/manifest.json")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="apple-mobile-web-app-title", content="SEK => USD")
+        meta(name="msapplication-TileColor", content="#2F3BA2")
         title Svenska Kronor till USD
 
 body
@@ -25,28 +30,22 @@ body
                         div(class="form-group row")
                                 label(class=["col-sm-1", "text-right"], for="usd") #[h1 $ ]
                                 output(class=["col-sm-11", "form-control", "form-control-lg"], type="number", id="usd", for="sek")
-                button(class=["btn", "btn-lg"], type="button", aria-label="Update currency rates", onclick="updateRates()") Update rates
-                div(class=["row", "text-center"])
-                        label(for="dateUpdated") Exchange rates updated on
-                div(class=["row", "text-center"])
-                        h3(id="dateUpdated") (null)
+                label(for="dateUpdated", class="text-center") Exchange rates updated on
+                h3(id="dateUpdated", class="text-center") (null)
         script(
-        src="https://code.jquery.com/jquery-3.2.1.min.js",
-        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f",
-        crossorigin="anonymous"
+        src="/script/jquery-3.2.1.min.js",
+        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
         )
         script(
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js",
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4",
-        crossorigin="anonymous"
+        src="/script/popper.min.js",
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
         )
         script(
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js",
-        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1",
-        crossorigin="anonymous"
+        src="/script/bootstrap.min.js",
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         )
         script(
         src="/script/money.min.js",
-        integrity="sha384-azvC0tD7cp7HVImGHaFV/ywqWprXpbVAv3Cc/73d/02UfZWR8vNM+kATzaWUIUMQ",
+        integrity="sha384-azvC0tD7cp7HVImGHaFV/ywqWprXpbVAv3Cc/73d/02UfZWR8vNM+kATzaWUIUMQ"
         )
         script(src="/script/main.js")
