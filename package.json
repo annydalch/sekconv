@@ -13,8 +13,7 @@
     "license": "MIT",
     "pre-commit": [
         "lint",
-        "validate",
-        "test"
+        "validate"
     ],
     "devDependencies": {
         "ava": "^0.22.0",
